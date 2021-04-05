@@ -214,6 +214,32 @@ export const NETWORKS_CONFIG: NetworkConfig = {
       initial: 2
     }
   },
+  EVRICE: {
+    id: 'EVRICE',
+    name: 'Evrice',
+    unit: 'EVC' as TTicker,
+    chainId: 1010,
+    isCustom: false,
+    color: '#6d2eae',
+    blockExplorer: makeExplorer({
+      name: 'Evrice explorer',
+      origin: 'https://evrice.com/explorer/',
+    }),
+    tokens: [],
+    contracts: [],
+    dPaths: {
+      [WalletId.TREZOR]: DPaths.ETH_DEFAULT,
+      [WalletId.LEDGER_NANO_S]: DPaths.ETH_LEDGER,
+      [WalletId.TREZOR_NEW]: DPaths.ETH_DEFAULT,
+      [WalletId.LEDGER_NANO_S_NEW]: DPaths.ETH_LEDGER,
+      default: DPaths.ETH_DEFAULT
+    },
+    gasPriceSettings: {
+      min: 1,
+      max: 60,
+      initial: 1
+    }
+  },
   POA: {
     id: 'POA',
     name: 'POA',
